@@ -8,7 +8,7 @@ router.register(r'students', StudentViewSet, basename='students')
 
 urlpatterns = [
     path('router/', include(router.urls)),
-    path('index/',index , name="index" ),
+    path('home/',home , name="home" ),
     path('student/', StudentView , name="student"),
     path('login/', login , name="login"),
     path('student_api', StudentAPIView.as_view() , name="student_api"),

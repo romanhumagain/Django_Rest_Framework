@@ -19,7 +19,7 @@ def login(request):
 
 
 @api_view(['GET', 'POST', 'PUT', 'PATCH'])
-def index(request):
+def home(request):
     personal_info = {
         'name': "Roman Humagain",
         'course': "BSC Hons",
@@ -152,7 +152,7 @@ class RegisterUser(APIView):
                 {'status': True, 'message': "User Created Successfully", 'data': serializer.data},
                 status=status.HTTP_201_CREATED
             )
-      return Response({'status': False, "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+    return Response({'status': False, "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
     
     
 # -----for login the user--------
